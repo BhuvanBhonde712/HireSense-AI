@@ -8,7 +8,7 @@ import io
 st.set_page_config(
     page_title="HireSense AI",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="collapsed",
 )
 
 try:
@@ -36,12 +36,18 @@ html, body, [class*="css"] {
     padding-bottom: 3rem !important;
     padding-left: 2.75rem !important;
     padding-right: 2.75rem !important;
-    max-width: 940px !important;
+    max-width: 860px !important;
 }
 
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #0B0B0F; }
 ::-webkit-scrollbar-thumb { background: #2A2A38; border-radius: 4px; }
+
+/* Hide sidebar and its toggle completely */
+[data-testid="stSidebar"] { display: none !important; }
+[data-testid="collapsedControl"] { display: none !important; }
+[data-testid="stSidebarCollapsedControl"] { display: none !important; }
+section[data-testid="stSidebar"] { display: none !important; }
 
 /* Sidebar */
 [data-testid="stSidebar"] {
@@ -291,47 +297,30 @@ if "job_desc_s"  not in st.session_state: st.session_state.job_desc_s  = ""
 if "is_reeval"   not in st.session_state: st.session_state.is_reeval   = False
 
 
-# ── Sidebar ───────────────────────────────────────────────────────────────────
-with st.sidebar:
-    st.markdown("""
-    <div style="display:flex;align-items:center;gap:11px;margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid #18181F;">
+# ── Top nav bar (replaces sidebar) ───────────────────────────────────────────
+st.markdown("""
+<div style="display:flex;align-items:center;justify-content:space-between;padding:0.85rem 0;margin-bottom:1.75rem;border-bottom:1px solid #1E1E28;">
+    <div style="display:flex;align-items:center;gap:12px;">
         <div class="logo-mark">H</div>
         <div>
-            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:800;color:#FFFFFF;letter-spacing:-0.01em;">HireSense AI</div>
-            <div style="font-size:11px;color:#555568;margin-top:2px;font-weight:400;">Resume Intelligence</div>
+            <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem;font-weight:800;color:#FFFFFF;letter-spacing:-0.01em;">HireSense AI</span>
+            <span style="font-size:11px;color:#555568;margin-left:10px;font-weight:400;">Resume Intelligence Platform</span>
         </div>
     </div>
-    <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#6666AA;font-weight:700;margin-bottom:0.75rem;">What it analyzes</div>
-    """, unsafe_allow_html=True)
-
-    features = [
-        ("#6366F1", "Resume Rating",         "Scores your resume out of 10 for clarity and impact"),
-        ("#34D399", "Extracted Highlights",   "Skills, keywords, and projects pulled from your resume"),
-        ("#FBBF24", "Section Improvements",   "Specific suggestions for every section of your resume"),
-        ("#F87171", "Professional Summary",   "AI-generated 2-line summary ready to use"),
-        ("#A78BFA", "JD Alignment",           "Matches your resume against the target job description"),
-    ]
-    for clr, title, desc in features:
-        st.markdown(f"""
-        <div style="display:flex;align-items:flex-start;gap:10px;padding:0.65rem 0;border-bottom:1px solid #111118;">
-            <div style="width:8px;height:8px;border-radius:50%;background:{clr};margin-top:5px;flex-shrink:0;box-shadow:0 0 8px {clr}88;"></div>
-            <div>
-                <div style="font-size:12.5px;font-weight:600;color:#E8E8F5;margin-bottom:2px;">{title}</div>
-                <div style="font-size:11px;color:#555568;line-height:1.5;">{desc}</div>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-
-    st.markdown("""
-    <div style="margin-top:2rem;padding-top:1.25rem;border-top:1px solid #18181F;">
-        <div style="font-size:11px;color:#6666AA;font-weight:500;">Powered by Google Gemini AI</div>
-        <div style="display:flex;align-items:center;gap:6px;margin-top:7px;">
-            <span style="width:6px;height:6px;background:#34D399;border-radius:50%;display:inline-block;box-shadow:0 0 6px #34D39988;"></span>
-            <span style="font-size:11px;color:#6666AA;">All systems operational</span>
-        </div>
+    <div style="display:flex;align-items:center;gap:6px;">
+        <span style="width:6px;height:6px;background:#34D399;border-radius:50%;display:inline-block;box-shadow:0 0 6px #34D39988;"></span>
+        <span style="font-size:11px;color:#555568;">Powered by Google Gemini AI</span>
     </div>
-    """, unsafe_allow_html=True)
+</div>
 
+<div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:2rem;">
+    <span style="font-size:11.5px;font-weight:500;padding:4px 12px;border-radius:99px;background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.25);color:#A5B4FC;">Resume Rating /10</span>
+    <span style="font-size:11.5px;font-weight:500;padding:4px 12px;border-radius:99px;background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.2);color:#6EE7B7;">Skills & Keywords</span>
+    <span style="font-size:11.5px;font-weight:500;padding:4px 12px;border-radius:99px;background:rgba(251,191,36,0.08);border:1px solid rgba(251,191,36,0.2);color:#FCD34D;">Section Improvements</span>
+    <span style="font-size:11.5px;font-weight:500;padding:4px 12px;border-radius:99px;background:rgba(248,113,113,0.08);border:1px solid rgba(248,113,113,0.2);color:#FCA5A5;">AI Summary</span>
+    <span style="font-size:11.5px;font-weight:500;padding:4px 12px;border-radius:99px;background:rgba(167,139,250,0.08);border:1px solid rgba(167,139,250,0.2);color:#C4B5FD;">JD Alignment</span>
+</div>
+""", unsafe_allow_html=True)
 
 # ══════════════════════════════════════════════════════════════════════════════
 #  INPUT SCREEN
@@ -339,15 +328,11 @@ with st.sidebar:
 if not st.session_state.show_result:
 
     st.markdown("""
-    <div style="display:flex;align-items:center;gap:14px;margin-bottom:0.75rem;">
-        <div class="logo-mark-lg">H</div>
-        <div>
-            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:2rem;font-weight:800;color:#FFFFFF;letter-spacing:-0.03em;line-height:1.1;">HireSense AI</div>
-            <div style="font-size:13px;color:#7777AA;margin-top:4px;font-weight:400;letter-spacing:0.02em;">Resume Intelligence Platform</div>
+    <div style="margin-bottom:1.75rem;">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:1.75rem;font-weight:800;color:#FFFFFF;letter-spacing:-0.025em;line-height:1.2;margin-bottom:0.5rem;">Analyze Your Resume</div>
+        <div style="font-size:14px;color:#8888AA;line-height:1.8;max-width:600px;">
+            Upload your resume as a PDF. Get an instant AI-powered rating, extracted highlights, section-by-section improvements, a ready-to-use professional summary, and alignment analysis against any job description.
         </div>
-    </div>
-    <div style="font-size:14px;color:#8888AA;line-height:1.8;margin-bottom:2rem;max-width:600px;">
-        Upload your resume as a PDF. Get an instant rating, extracted highlights, section-by-section improvements, a ready-to-use professional summary, and alignment analysis against any job description.
     </div>
     """, unsafe_allow_html=True)
 
