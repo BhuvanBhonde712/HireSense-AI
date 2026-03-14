@@ -8,8 +8,7 @@ Built for the **Code the Future: AI Edition** hackathon by UnsaidTalks Education
 
 ## Live Demo
 
-[https://hiresense.streamlit.app](https://hiresense.streamlit.app) *(replace with your deployed URL)*
-
+https://hiresense--ai.streamlit.app/
 ---
 
 ## What It Does
