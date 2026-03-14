@@ -25,10 +25,10 @@ st.markdown("""
 *, *::before, *::after { box-sizing: border-box; }
 html, body, [class*="css"] {
     font-family: 'Outfit', sans-serif;
-    background: #0F0F13 !important;
-    color: #E2E2E9;
+    background: #0B0B0F !important;
+    color: #F0F0F5;
 }
-.stApp { background: #0F0F13 !important; }
+.stApp { background: #0B0B0F !important; }
 #MainMenu, footer, header { visibility: hidden !important; }
 
 .block-container {
@@ -36,20 +36,20 @@ html, body, [class*="css"] {
     padding-bottom: 3rem !important;
     padding-left: 2.75rem !important;
     padding-right: 2.75rem !important;
-    max-width: 920px !important;
+    max-width: 940px !important;
 }
 
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #0F0F13; }
-::-webkit-scrollbar-thumb { background: #2A2A35; border-radius: 4px; }
+::-webkit-scrollbar-track { background: #0B0B0F; }
+::-webkit-scrollbar-thumb { background: #2A2A38; border-radius: 4px; }
 
 /* Sidebar */
 [data-testid="stSidebar"] {
-    background: #09090E !important;
-    border-right: 1px solid #1C1C25 !important;
+    background: #07070B !important;
+    border-right: 1px solid #18181F !important;
 }
 [data-testid="stSidebar"] > div:first-child {
-    background: #09090E !important;
+    background: #07070B !important;
     padding: 1.75rem 1.4rem !important;
 }
 
@@ -62,73 +62,70 @@ html, body, [class*="css"] {
     font-family: 'Bricolage Grotesque', sans-serif;
     font-weight: 800; font-size: 16px; color: #fff;
     flex-shrink: 0;
-    box-shadow: 0 4px 14px rgba(99,102,241,0.35);
+    box-shadow: 0 4px 14px rgba(99,102,241,0.4);
 }
 .logo-mark-lg {
-    width: 48px; height: 48px;
-    border-radius: 13px;
+    width: 50px; height: 50px;
+    border-radius: 14px;
     background: linear-gradient(135deg, #4338CA 0%, #7C3AED 100%);
     display: inline-flex; align-items: center; justify-content: center;
     font-family: 'Bricolage Grotesque', sans-serif;
-    font-weight: 800; font-size: 22px; color: #fff;
+    font-weight: 800; font-size: 24px; color: #fff;
     flex-shrink: 0;
-    box-shadow: 0 6px 20px rgba(99,102,241,0.4);
+    box-shadow: 0 6px 24px rgba(99,102,241,0.45);
 }
 
-/* Labels */
+/* Field labels */
 .stTextArea > label, .stTextInput > label, .stFileUploader > label {
     font-family: 'Outfit', sans-serif !important;
-    font-size: 10.5px !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.14em !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.16em !important;
     text-transform: uppercase !important;
-    color: #4A4A5A !important;
+    color: #FFFFFF !important;
 }
 
 /* Textareas */
 .stTextArea textarea {
-    background: #141418 !important;
-    border: 1px solid #1F1F2A !important;
+    background: #111117 !important;
+    border: 1.5px solid #22222E !important;
     border-radius: 12px !important;
-    color: #E2E2E9 !important;
+    color: #F0F0F5 !important;
     font-family: 'Outfit', sans-serif !important;
     font-size: 13.5px !important;
     line-height: 1.75 !important;
     padding: 0.9rem 1rem !important;
 }
 .stTextArea textarea:focus {
-    border-color: #4F46E5 !important;
-    box-shadow: 0 0 0 3px rgba(79,70,229,0.12) !important;
+    border-color: #6366F1 !important;
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.15) !important;
 }
-.stTextArea textarea::placeholder { color: #2A2A38 !important; }
+.stTextArea textarea::placeholder { color: #32323F !important; }
 
 /* Text input */
 .stTextInput input {
-    background: #141418 !important;
-    border: 1px solid #1F1F2A !important;
+    background: #111117 !important;
+    border: 1.5px solid #22222E !important;
     border-radius: 10px !important;
-    color: #E2E2E9 !important;
+    color: #F0F0F5 !important;
     font-family: 'Outfit', sans-serif !important;
     font-size: 13.5px !important;
     padding: 0.65rem 1rem !important;
 }
 .stTextInput input:focus {
-    border-color: #4F46E5 !important;
-    box-shadow: 0 0 0 3px rgba(79,70,229,0.12) !important;
+    border-color: #6366F1 !important;
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.15) !important;
 }
-.stTextInput input::placeholder { color: #2A2A38 !important; }
+.stTextInput input::placeholder { color: #32323F !important; }
 
 /* File uploader */
-[data-testid="stFileUploader"] {
-    background: #141418 !important;
-    border: 1.5px dashed #1F1F2A !important;
+[data-testid="stFileUploader"] section {
+    background: #111117 !important;
+    border: 1.5px dashed #22222E !important;
     border-radius: 12px !important;
     padding: 1rem !important;
 }
-[data-testid="stFileUploader"]:hover {
-    border-color: #4F46E5 !important;
-}
-[data-testid="stFileUploaderDropzoneInstructions"] { color: #4A4A5A !important; }
+[data-testid="stFileUploaderDropzoneInstructions"] div span { color: #888899 !important; }
 
 /* Primary button */
 .stButton > button {
@@ -142,7 +139,7 @@ html, body, [class*="css"] {
     font-size: 13.5px !important;
     width: 100% !important;
     letter-spacing: 0.02em !important;
-    box-shadow: 0 4px 18px rgba(79,70,229,0.28) !important;
+    box-shadow: 0 4px 18px rgba(79,70,229,0.3) !important;
     transition: all 0.2s !important;
 }
 .stButton > button:hover {
@@ -153,8 +150,8 @@ html, body, [class*="css"] {
 /* Back button */
 .back-btn .stButton > button {
     background: transparent !important;
-    border: 1px solid #1F1F2A !important;
-    color: #4A4A5A !important;
+    border: 1.5px solid #22222E !important;
+    color: #AAAABD !important;
     box-shadow: none !important;
     font-family: 'Outfit', sans-serif !important;
     font-weight: 500 !important;
@@ -164,8 +161,29 @@ html, body, [class*="css"] {
 }
 .back-btn .stButton > button:hover {
     background: transparent !important;
-    border-color: #3A3A4A !important;
-    color: #9696AA !important;
+    border-color: #44445A !important;
+    color: #E0E0EE !important;
+    transform: none !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+}
+
+/* Re-eval button */
+.reeval-btn .stButton > button {
+    background: rgba(99,102,241,0.12) !important;
+    border: 1.5px solid rgba(99,102,241,0.35) !important;
+    color: #A5B4FC !important;
+    box-shadow: none !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 12.5px !important;
+    padding: 0.38rem 1rem !important;
+    border-radius: 8px !important;
+}
+.reeval-btn .stButton > button:hover {
+    background: rgba(99,102,241,0.2) !important;
+    border-color: rgba(99,102,241,0.6) !important;
+    color: #C7D2FE !important;
     transform: none !important;
     box-shadow: none !important;
     opacity: 1 !important;
@@ -173,8 +191,8 @@ html, body, [class*="css"] {
 
 .stSpinner > div { border-top-color: #6366F1 !important; }
 .stAlert {
-    background: rgba(239,68,68,0.07) !important;
-    border: 1px solid rgba(239,68,68,0.2) !important;
+    background: rgba(239,68,68,0.08) !important;
+    border: 1px solid rgba(239,68,68,0.25) !important;
     border-radius: 10px !important;
 }
 [data-testid="column"] { padding: 0 0.4rem !important; }
@@ -276,14 +294,14 @@ if "is_reeval"   not in st.session_state: st.session_state.is_reeval   = False
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("""
-    <div style="display:flex;align-items:center;gap:11px;margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid #1C1C25;">
+    <div style="display:flex;align-items:center;gap:11px;margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid #18181F;">
         <div class="logo-mark">H</div>
         <div>
-            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:700;color:#E2E2E9;letter-spacing:-0.01em;">HireSense AI</div>
-            <div style="font-size:11px;color:#3A3A4A;margin-top:2px;">Resume Intelligence</div>
+            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:800;color:#FFFFFF;letter-spacing:-0.01em;">HireSense AI</div>
+            <div style="font-size:11px;color:#555568;margin-top:2px;font-weight:400;">Resume Intelligence</div>
         </div>
     </div>
-    <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#2A2A38;font-weight:600;margin-bottom:0.75rem;">What it analyzes</div>
+    <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#6666AA;font-weight:700;margin-bottom:0.75rem;">What it analyzes</div>
     """, unsafe_allow_html=True)
 
     features = [
@@ -295,21 +313,21 @@ with st.sidebar:
     ]
     for clr, title, desc in features:
         st.markdown(f"""
-        <div style="display:flex;align-items:flex-start;gap:10px;padding:0.65rem 0;border-bottom:1px solid #141420;">
-            <div style="width:8px;height:8px;border-radius:50%;background:{clr};margin-top:5px;flex-shrink:0;box-shadow:0 0 6px {clr}66;"></div>
+        <div style="display:flex;align-items:flex-start;gap:10px;padding:0.65rem 0;border-bottom:1px solid #111118;">
+            <div style="width:8px;height:8px;border-radius:50%;background:{clr};margin-top:5px;flex-shrink:0;box-shadow:0 0 8px {clr}88;"></div>
             <div>
-                <div style="font-size:12.5px;font-weight:500;color:#C4C4D0;margin-bottom:2px;">{title}</div>
-                <div style="font-size:11px;color:#3A3A4A;line-height:1.5;">{desc}</div>
+                <div style="font-size:12.5px;font-weight:600;color:#E8E8F5;margin-bottom:2px;">{title}</div>
+                <div style="font-size:11px;color:#555568;line-height:1.5;">{desc}</div>
             </div>
         </div>
         """, unsafe_allow_html=True)
 
     st.markdown("""
-    <div style="margin-top:2rem;padding-top:1.25rem;border-top:1px solid #1C1C25;">
-        <div style="font-size:11px;color:#2E2E3A;">Powered by Google Gemini AI</div>
+    <div style="margin-top:2rem;padding-top:1.25rem;border-top:1px solid #18181F;">
+        <div style="font-size:11px;color:#6666AA;font-weight:500;">Powered by Google Gemini AI</div>
         <div style="display:flex;align-items:center;gap:6px;margin-top:7px;">
-            <span style="width:6px;height:6px;background:#34D399;border-radius:50%;display:inline-block;"></span>
-            <span style="font-size:11px;color:#3A3A4A;">All systems operational</span>
+            <span style="width:6px;height:6px;background:#34D399;border-radius:50%;display:inline-block;box-shadow:0 0 6px #34D39988;"></span>
+            <span style="font-size:11px;color:#6666AA;">All systems operational</span>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -321,14 +339,14 @@ with st.sidebar:
 if not st.session_state.show_result:
 
     st.markdown("""
-    <div style="display:flex;align-items:center;gap:14px;margin-bottom:0.6rem;">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:0.75rem;">
         <div class="logo-mark-lg">H</div>
         <div>
-            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:1.85rem;font-weight:800;color:#E2E2E9;letter-spacing:-0.03em;line-height:1.1;">HireSense AI</div>
-            <div style="font-size:13px;color:#4A4A5A;margin-top:3px;">Resume Intelligence Platform</div>
+            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:2rem;font-weight:800;color:#FFFFFF;letter-spacing:-0.03em;line-height:1.1;">HireSense AI</div>
+            <div style="font-size:13px;color:#7777AA;margin-top:4px;font-weight:400;letter-spacing:0.02em;">Resume Intelligence Platform</div>
         </div>
     </div>
-    <div style="font-size:13.5px;color:#4A4A5A;line-height:1.75;margin-bottom:2rem;max-width:580px;">
+    <div style="font-size:14px;color:#8888AA;line-height:1.8;margin-bottom:2rem;max-width:600px;">
         Upload your resume as a PDF. Get an instant rating, extracted highlights, section-by-section improvements, a ready-to-use professional summary, and alignment analysis against any job description.
     </div>
     """, unsafe_allow_html=True)
@@ -410,6 +428,7 @@ else:
             st.rerun()
         st.markdown("</div>", unsafe_allow_html=True)
     with reeval_col:
+        st.markdown('<div class="reeval-btn">', unsafe_allow_html=True)
         if st.button("Re-evaluate Resume"):
             st.session_state.prev_score = st.session_state.result.get("rating", 0)
             st.session_state.is_reeval = True
@@ -426,12 +445,12 @@ else:
     # ── Score card ──
     svg = ring_svg(score, color)
     st.markdown(f"""
-    <div style="background:#111118;border:1px solid #1C1C25;border-radius:18px;padding:1.85rem 2.25rem;display:flex;align-items:center;gap:2.25rem;margin-bottom:1rem;box-shadow:0 4px 24px rgba(0,0,0,0.3);flex-wrap:wrap;">
+    <div style="background:#111117;border:1px solid #1E1E28;border-radius:18px;padding:1.85rem 2.25rem;display:flex;align-items:center;gap:2.25rem;margin-bottom:1rem;box-shadow:0 4px 24px rgba(0,0,0,0.3);flex-wrap:wrap;">
         <div style="position:relative;width:120px;height:120px;flex-shrink:0;">
             {svg}
             <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
                 <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:2.6rem;font-weight:800;line-height:1;color:{color};">{score}</div>
-                <div style="font-size:11px;color:#2E2E3A;margin-top:3px;">/ 10</div>
+                <div style="font-size:11px;color:#44445A;margin-top:3px;">/ 10</div>
             </div>
         </div>
         <div style="flex:1;min-width:200px;">
@@ -467,8 +486,8 @@ else:
     st.markdown(f"""
     <div style="background:#111118;border:1px solid #4338CA44;border-radius:16px;padding:1.35rem 1.75rem;margin-bottom:1rem;">
         <div style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#6366F1;font-weight:700;margin-bottom:0.75rem;">AI-Generated Professional Summary</div>
-        <div style="font-size:14.5px;color:#C4C4D0;line-height:1.8;font-style:italic;">"{r.get("professionalSummary","")}"</div>
-        <div style="font-size:11px;color:#2E2E3A;margin-top:0.75rem;">Copy this to the top of your resume.</div>
+        <div style="font-size:14.5px;color:#E8E8F5;line-height:1.8;font-style:italic;">"{r.get("professionalSummary","")}"</div>
+        <div style="font-size:11px;color:#666688;margin-top:0.75rem;">Copy this to the top of your resume.</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -483,8 +502,8 @@ else:
             for s in r.get("extractedSkills", [])
         ])
         st.markdown(f"""
-        <div style="background:#111118;border:1px solid #1C1C25;border-radius:16px;padding:1.25rem 1.4rem;">
-            <div style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#2E2E3A;font-weight:600;margin-bottom:0.85rem;">Skills</div>
+        <div style="background:#111117;border:1px solid #1E1E28;border-radius:16px;padding:1.25rem 1.4rem;">
+            <div style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#9999BB;font-weight:700;margin-bottom:0.85rem;">Skills</div>
             <div>{tags}</div>
         </div>""", unsafe_allow_html=True)
 
@@ -494,21 +513,21 @@ else:
             for k in r.get("extractedKeywords", [])
         ])
         st.markdown(f"""
-        <div style="background:#111118;border:1px solid #1C1C25;border-radius:16px;padding:1.25rem 1.4rem;">
-            <div style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#2E2E3A;font-weight:600;margin-bottom:0.85rem;">Keywords</div>
+        <div style="background:#111117;border:1px solid #1E1E28;border-radius:16px;padding:1.25rem 1.4rem;">
+            <div style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#9999BB;font-weight:700;margin-bottom:0.85rem;">Keywords</div>
             <div>{tags}</div>
         </div>""", unsafe_allow_html=True)
 
     with hc3:
         projects = r.get("extractedProjects", [])
         proj_rows = "".join([
-            f'<div style="font-size:12.5px;color:#9A9AAA;padding:0.4rem 0;border-bottom:1px solid #14141E;line-height:1.5;">{p}</div>'
+            f'<div style="font-size:12.5px;color:#C8C8DC;padding:0.4rem 0;border-bottom:1px solid #14141E;line-height:1.5;">{p}</div>'
             for p in projects
         ])
         st.markdown(f"""
-        <div style="background:#111118;border:1px solid #1C1C25;border-radius:16px;padding:1.25rem 1.4rem;">
-            <div style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#2E2E3A;font-weight:600;margin-bottom:0.85rem;">Projects</div>
-            {proj_rows if proj_rows else '<div style="font-size:12.5px;color:#3A3A4A;">No projects detected.</div>'}
+        <div style="background:#111117;border:1px solid #1E1E28;border-radius:16px;padding:1.25rem 1.4rem;">
+            <div style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#9999BB;font-weight:700;margin-bottom:0.85rem;">Projects</div>
+            {proj_rows if proj_rows else '<div style="font-size:12.5px;color:#666688;">No projects detected.</div>'}
         </div>""", unsafe_allow_html=True)
 
     st.markdown("<div style='height:1rem'></div>", unsafe_allow_html=True)
@@ -540,9 +559,9 @@ else:
         lbl = section_labels.get(section, section.title())
         with col:
             st.markdown(f"""
-            <div style="background:#111118;border:1px solid #1C1C25;border-radius:14px;padding:1.1rem 1.3rem;margin-bottom:0.75rem;border-left:3px solid {clr};">
+            <div style="background:#111117;border:1px solid #1E1E28;border-radius:14px;padding:1.1rem 1.3rem;margin-bottom:0.75rem;border-left:3px solid {clr};">
                 <div style="font-size:10.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:{clr};margin-bottom:0.5rem;">{lbl}</div>
-                <div style="font-size:13px;color:#9A9AAA;line-height:1.65;">{suggestion}</div>
+                <div style="font-size:13px;color:#C8C8DC;line-height:1.65;">{suggestion}</div>
             </div>""", unsafe_allow_html=True)
 
     # ── Improvement Task ──
@@ -567,13 +586,13 @@ else:
 
         a_color = "#34D399" if alignment >= 70 else "#FBBF24" if alignment >= 40 else "#F87171"
         st.markdown(f"""
-        <div style="background:#111118;border:1px solid #1C1C25;border-radius:16px;padding:1.5rem 1.75rem;margin-bottom:0.85rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;">
+        <div style="background:#111117;border:1px solid #1E1E28;border-radius:16px;padding:1.5rem 1.75rem;margin-bottom:0.85rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;">
             <div style="text-align:center;flex-shrink:0;">
                 <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:2.8rem;font-weight:800;color:{a_color};line-height:1;">{alignment}%</div>
-                <div style="font-size:11px;color:#2E2E3A;margin-top:3px;">Alignment Score</div>
+                <div style="font-size:11px;color:#44445A;margin-top:3px;">Alignment Score</div>
             </div>
             <div style="flex:1;min-width:200px;">
-                {"".join([f'<div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.4rem 0;border-bottom:1px solid #14141E;font-size:13px;color:#9A9AAA;line-height:1.5;"><span style="color:#F87171;margin-top:2px;font-weight:700;flex-shrink:0;">-</span><span>{g}</span></div>' for g in gaps])}
+                {"".join([f'<div style="display:flex;align-items:flex-start;gap:0.6rem;padding:0.4rem 0;border-bottom:1px solid #14141E;font-size:13px;color:#C8C8DC;line-height:1.5;"><span style="color:#F87171;margin-top:2px;font-weight:700;flex-shrink:0;">-</span><span>{g}</span></div>' for g in gaps])}
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -584,10 +603,10 @@ else:
                 f'<span style="display:inline-flex;padding:4px 11px;border-radius:7px;font-size:12px;font-weight:500;background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.2);color:#34D399;margin:3px 3px 3px 0;">{k}</span>'
                 for k in matched
             ])
-            st.markdown(f'<div style="background:#111118;border:1px solid #1C1C25;border-radius:16px;padding:1.25rem 1.4rem;"><div style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#2E2E3A;font-weight:600;margin-bottom:0.85rem;">Matched Keywords</div><div>{tags}</div></div>', unsafe_allow_html=True)
+            st.markdown(f'<div style="background:#111117;border:1px solid #1E1E28;border-radius:16px;padding:1.25rem 1.4rem;"><div style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#9999BB;font-weight:700;margin-bottom:0.85rem;">Matched Keywords</div><div>{tags}</div></div>', unsafe_allow_html=True)
         with kc2:
             tags = "".join([
                 f'<span style="display:inline-flex;padding:4px 11px;border-radius:7px;font-size:12px;font-weight:500;background:rgba(248,113,113,0.08);border:1px solid rgba(248,113,113,0.2);color:#F87171;margin:3px 3px 3px 0;">{k}</span>'
                 for k in missing
             ])
-            st.markdown(f'<div style="background:#111118;border:1px solid #1C1C25;border-radius:16px;padding:1.25rem 1.4rem;"><div style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#2E2E3A;font-weight:600;margin-bottom:0.85rem;">Missing Keywords</div><div>{tags}</div></div>', unsafe_allow_html=True)
+            st.markdown(f'<div style="background:#111117;border:1px solid #1E1E28;border-radius:16px;padding:1.25rem 1.4rem;"><div style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#9999BB;font-weight:700;margin-bottom:0.85rem;">Missing Keywords</div><div>{tags}</div></div>', unsafe_allow_html=True)
