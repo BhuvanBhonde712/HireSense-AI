@@ -37,7 +37,7 @@ Most candidates apply to jobs without knowing how their resume performs against 
 | Layer | Technology |
 |---|---|
 | UI Framework | Streamlit |
-| AI Model | Google Gemini 2.0 Flash Lite |
+| AI Model | Google Gemini 2.5 Flash |
 | Language | Python 3.10+ |
 | Deployment | Streamlit Community Cloud |
 
