@@ -6,9 +6,9 @@ Built for the **Code the Future: AI Edition** hackathon by UnsaidTalks Education
 
 ---
 
-## Live Demo
-
-https://hiresense--ai.streamlit.app/
+## Live Demo: [Click Here](https://hiresense--ai.streamlit.app/)
+---
+**Demo Video:** [Watch on Google Drive](https://drive.google.com/file/d/1leZjqhQgrtByPy9B9Frh3IAjH8QvVWLQ/view?usp=drivesdk)
 ---
 
 ## What It Does
